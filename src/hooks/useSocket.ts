@@ -11,7 +11,7 @@ export const useSocket = () => {
     const [connected, setConnected] = useState(false);
 
     useEffect(() => {
-        const socketInstance: Socket = io("http://localhost:3001");
+        const socketInstance: Socket = io("https://gridwarsbackend.onrender.com");
 
         socketInstance.on("connect", () => {
             setConnected(true);
